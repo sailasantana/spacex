@@ -1,6 +1,6 @@
 # Podsights Test
 
-Use this GraphQL API https://api.spacex.land/graphql/ to display some interesting data of SpaceX. The result should be a single page with at least two tables (Past Launches, Current Missions...)
+Use this GraphQL API https://api.spacex.land/graphql/ to display some interesting data from SpaceX. The result should be a single page with at least two tables (Past Launches, Current Missions...)
 
 The goal of this task is to test your frontend skills, from design to writing clean and reusable code.
 
