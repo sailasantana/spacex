@@ -10,7 +10,6 @@ The goal of this task is to test your frontend skills, from design to writing cl
 - The Table component should have a configurable search input, so the user can filter the current table data.
 - Use async/await to fetch data.
 - Use hooks
-- Use inline-css to style React components.
 
 Apart from this you can do anything you want.
 
