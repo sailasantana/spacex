@@ -36,6 +36,7 @@ The goal of this task is to test your frontend skills, from design to writing cl
 
 - Use async/await to fetch data.
 - Use hooks
+- Make it pretty and minimalistic.
 
 Apart from this you can do anything you want.
 
