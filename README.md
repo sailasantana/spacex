@@ -4,6 +4,11 @@ Use this GraphQL API https://api.spacex.land/graphql/ to display some interestin
 
 The goal of this task is to test your frontend skills, from design to writing clean and reusable code.
 
+### Start dev server:
+
+- npm install
+- npm run start
+
 ### Requirements:
 
 - You will need to create a Table component by yourself.
