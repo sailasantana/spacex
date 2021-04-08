@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import UpcomingLaunches from './Upcoming Launches/upcoming';
+import PastLaunches from './Past Launches/past';
+import Rockets from './Rockets/rockets';
 
 const App = () => {
+
   return (
-    <div style={{ fontSize: '1.375rem', color: 'blueviolet', fontWeight: 500 }}>
-      Hope you have fun building this tiny app. 🚀
+    <div>
+      <PastLaunches />
+      <UpcomingLaunches />
+      <Rockets /> 
     </div>
+   
   );
 };
 
