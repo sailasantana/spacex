@@ -12,8 +12,8 @@ export const Home = () => {
     }
 
     return(
-        <div >
-            <button className = "Home" onClick = {handleClick}>Get Started</button>
+        <div className = "Home-container" >
+            <button className= "Home-button"  onClick = {handleClick}>Get Started</button>
         </div>
     )
 }

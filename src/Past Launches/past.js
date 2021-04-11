@@ -31,7 +31,6 @@ export const PastLaunches = () => {
           }),
         })
         const { data } = await response.json();
-        console.log(data)
         const result = data.launchesPast
         setRows([...result])
       

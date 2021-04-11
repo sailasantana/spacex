@@ -1,5 +1,37 @@
+* {
+    font-family: Helvetica Neue,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;
+}
+
+.Home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image : url('https://www.teahub.io/photos/full/200-2003622_flat-design-space.gif') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;    
+
+}
+
+.Home-button {
+   
+    color: white;
+    text-decoration: none;
+    border : 3px solid white;
+    padding : 12px;
+    min-width: fit-content;
+    width: 15%;
+    text-align: center; 
+    background-color: Transparent;
+    font-size: 20px;
+
+  
+}
 
 
-.Home {
-    color :red;
+.Home-button:hover{
+    color: rgb(254, 254, 53);
+    border : 3px solid rgb(254, 254, 53);
+    cursor:pointer;
+
 }

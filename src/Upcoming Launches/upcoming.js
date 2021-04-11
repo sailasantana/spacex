@@ -30,9 +30,7 @@ export const UpcomingLaunches = () => {
           }),
         })
         const { data } = await response.json();
-        console.log(data)
         const result = data.launchesUpcoming
-        console.log(result)
         setRows([...result])
       
       }, []);

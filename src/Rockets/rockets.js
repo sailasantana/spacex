@@ -37,7 +37,6 @@ export const Rockets = () => {
           }),
         })
         const { data } = await response.json();
-        console.log(data)
         const result = data.rockets
         setRows([...result])
       
