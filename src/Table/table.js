@@ -4,18 +4,9 @@ import { useTable } from 'react-table';
 
 
 export const Table = (props) => {
-    const [tempState, setTempState] = useState([])
     const columns = useMemo(() => props.columns, [props.columns])
-    
-     const data = useMemo(() => props.data, [props.data])
-    //const data = props.data
-    console.log(data)
-
-    useEffect(() => {
-        setTempState(props.data)
-        console.log(tempState)
-    }, [props.data])
-    
+    const data = useMemo(() => props.data, [props.data])
+        
     const {
         getTableProps,
         getTableBodyProps,
@@ -29,8 +20,6 @@ export const Table = (props) => {
     })
 
    
-
-
     return (
         <>
         <table {...getTableProps()}>
@@ -48,7 +37,7 @@ export const Table = (props) => {
                 prepareRow(row)
                 return (
                   <tr {...row.getRowProps()}>
-                    {row.cells.row && row.cells.map(cell => {
+                    {row.cells.map(cell => {
                       return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
                     })}
                   </tr>
@@ -56,9 +45,7 @@ export const Table = (props) => {
               })}
             </tbody>
         </table>
-            {props.data.length > 0 && props.data.map((item, index) => {
-                return <div key={index}>{item.name}</div>
-            })}
+           
         </>
     )
 

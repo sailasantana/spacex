@@ -21,9 +21,7 @@ export const Rockets = () => {
                     description
                     cost_per_launch
                     country
-                    mass {
-                      lb
-                    }
+                    
                   }
                 }
                   `,
@@ -36,14 +34,7 @@ export const Rockets = () => {
       
       }, []);
 
-      useEffect(() => {
-          console.log(rows)
-          console.log(rows.result)
-      }, [rows])
-
-
-      const boosters = rows.map( row => <div>{row.boosters}</div>)
-  
+    
     return ( 
       <div>
         <Table columns = {COLUMNS} data = {rows} />

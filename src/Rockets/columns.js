@@ -22,10 +22,6 @@ export const COLUMNS = [
     {
       Header: 'Country',
       accessor: 'country'
-    },
-    {
-      Header: 'Mass (lbs)',
-      accessor: 'mass'
-    },
+    }
   
   ]
