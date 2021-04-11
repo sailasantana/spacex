@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 
-
-
 const PastLaunches = () => {
 
   const fetchData = async () => {
@@ -52,11 +50,9 @@ const PastLaunches = () => {
       }),
     });
     const { data } = await resp.json();
-    console.log(data)
   }
 
   useEffect(() => {
-    console.log('useEffect runs');
     fetchData();   
   }, []);
 

@@ -26,11 +26,9 @@ const UpcomingLaunches = () => {
       }),
     });
     const { data } = await resp.json();
-    console.log(data)
   }
 
   useEffect(() => {
-    console.log('useEffect runs');
     fetchData();   
   }, []);
 
