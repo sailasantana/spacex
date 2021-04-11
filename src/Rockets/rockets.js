@@ -37,6 +37,7 @@ export const Rockets = () => {
     
     return ( 
       <div>
+         <h1>Rockets</h1> 
         <Table columns = {COLUMNS} data = {rows} />
       </div>   
       
