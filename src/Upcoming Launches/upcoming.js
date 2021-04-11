@@ -40,8 +40,11 @@ export const UpcomingLaunches = () => {
     
     return ( 
       <div>
+        {rows.length > 0 ?
+         <div>
         <h1>Upcoming Launches</h1>
         <Table columns = {COLUMNS} data = {rows} />
+        </div> : null}
       </div>   
       
     );

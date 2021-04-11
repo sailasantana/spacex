@@ -15,7 +15,7 @@ export const COLUMNS = [
     
     },
     {
-      Header: 'Rocket Name',
+      Header: 'Rocket',
       accessor: 'rocket.rocket_name',
    
     },

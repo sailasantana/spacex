@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Table } from './Table/table';
-import { COLUMNS } from './Rockets/columns';
 import { Rockets } from './Rockets/rockets';
 import { UpcomingLaunches } from './Upcoming Launches/upcoming';
 import { PastLaunches } from './Past Launches/past';
+import { Route, Switch } from 'react-router-dom'
+import { Home } from './Home/home';
+import React from 'react';
+
 
 const App = () => {
 
@@ -12,9 +13,10 @@ const App = () => {
 
   return (
     <div>
-      <Rockets />
-      <UpcomingLaunches />
-      <PastLaunches />
+      <Route exact path = '/' component={Home}/>   
+      <Route path = '/tables' component = {Rockets} />
+      <Route path = '/tables' component = {UpcomingLaunches} />
+      <Route path = '/tables' component = {PastLaunches} />
     </div>
    
   );

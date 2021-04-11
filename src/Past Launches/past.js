@@ -40,8 +40,11 @@ export const PastLaunches = () => {
     
     return ( 
       <div>
+        {rows.length > 0 ?
+         <div>
          <h1>Past Launches</h1> 
         <Table columns = {COLUMNS} data = {rows} />
+        </div> : null}
       </div>   
       
     );

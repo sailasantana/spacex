@@ -1,12 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { COLUMNS } from './columns';
 import { Table } from '../Table/table';
-import { useTable } from 'react-table';
+import { useHistory } from 'react-router';
+
 
 
 export const Rockets = () => {
 
     const [rows, setRows] = useState([]);
+    const history = useHistory();
+
+
+    function goBackHandle() {
+  
+      history.goBack()
+  
+    }
 
     useEffect(async () => {
         const response = await fetch('https://api.spacex.land/graphql/', {
@@ -37,8 +46,15 @@ export const Rockets = () => {
     
     return ( 
       <div>
-         <h1>Rockets</h1> 
-        <Table columns = {COLUMNS} data = {rows} />
+         <button onClick = {goBackHandle}>Go Back</button> 
+         {rows.length > 0 ?
+         <div>
+          <h1>Rockets</h1> 
+          <Table columns = {COLUMNS} data = {rows} />
+          </div>
+          : null
+         } 
+        
       </div>   
       
     );
