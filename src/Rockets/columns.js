@@ -1,18 +1,8 @@
 export const COLUMNS = [
     {
-      Header: 'Name',
+      Header: 'Rocket',
       accessor: 'name',
   
-    },
-    {
-      Header: 'Boosters',
-      accessor: 'boosters',
-    
-    },
-    {
-      Header: 'Description',
-      accessor: 'description',
-    
     },
     {
       Header: 'Cost Per Launch',
@@ -22,6 +12,11 @@ export const COLUMNS = [
     {
       Header: 'Country',
       accessor: 'country'
+    },
+    {
+      Header: 'Description',
+      accessor: 'description',
+    
     }
   
   ]

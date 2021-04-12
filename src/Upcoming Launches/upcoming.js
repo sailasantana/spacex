@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { COLUMNS } from './columns';
 import { Table } from '../Table/table';
+import './upcoming.css';
 
 
 export const UpcomingLaunches = () => {
@@ -40,7 +41,7 @@ export const UpcomingLaunches = () => {
       <div>
         {rows.length > 0 ?
          <div>
-        <h1>Upcoming Launches</h1>
+        <h1 className = "Upcoming-title">Upcoming Launches</h1>
         <Table columns = {COLUMNS} data = {rows} />
         </div> : null}
       </div>   

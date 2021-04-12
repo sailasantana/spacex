@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useTable } from 'react-table';
+import './table.css';
 
 
 
@@ -22,7 +23,7 @@ export const Table = (props) => {
    
     return (
         <>
-        <table {...getTableProps()}>
+        <table className = "Table-container" {...getTableProps()}>
         <thead>
               {headerGroups.map(headerGroup => (
                 <tr {...headerGroup.getHeaderGroupProps()}>

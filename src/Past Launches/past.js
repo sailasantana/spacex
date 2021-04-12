@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { COLUMNS } from './columns';
 import { Table } from '../Table/table';
 import { useTable } from 'react-table';
+import './past.css';
 
 
 export const PastLaunches = () => {
@@ -40,8 +41,8 @@ export const PastLaunches = () => {
     return ( 
       <div>
         {rows.length > 0 ?
-         <div>
-         <h1>Past Launches</h1> 
+         <div className = "Past-container">
+         <h1 className = "Past-title">Past Launches</h1> 
         <Table columns = {COLUMNS} data = {rows} />
         </div> : null}
       </div>   
