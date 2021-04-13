@@ -1,15 +1,34 @@
-import { Rockets } from './Components/Rockets/rockets';
-import { UpcomingLaunches } from './Components/Upcoming Launches/upcoming';
-import { PastLaunches } from './Components/Past Launches/past';
 import { Route, Switch } from 'react-router-dom'
 import { Home } from './Components/Home/home';
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import ErrorBoundary from './ErrorBoundary';
+import { List } from './Components/Table List/list';
 
 
 const App = () => {
 
+  // useEffect(() => {
+
+  //   fetch('https://api.spacexdata.com/v3/launches/upcoming', {
+  //     method: 'GET',
+  //     headers : {
+  //       'content-type': 'application/json'
+  //     }
+  //   } )
+  //   .then(res => {
+  //     if(!res.ok){
+  //      return res.json().then(e  => Promise.reject(e))
+  //     }
+  //     return res.json()
+  //   })
+  //   .then(response => {
+  //     console.log(response)
+  //   })
+  //   .catch(err => {
+  //     console.log(err)
+  //   })
+  // }, [])
 
  
 
@@ -17,11 +36,7 @@ const App = () => {
     <div>
       <ErrorBoundary>
         <Route exact path = '/' component={Home}/> 
-        <div className = "Tables-view-container">
-        <Route path = '/tables' component = {Rockets} />
-        <Route path = '/tables' component = {UpcomingLaunches} />
-        <Route path = '/tables' component = {PastLaunches} />
-        </div> 
+        <Route path = '/tables' component = {List} />
       </ErrorBoundary> 
     </div>
    

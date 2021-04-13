@@ -22,34 +22,17 @@ export const PastLaunches = () => {
         setPopup(!popUp)
     }
 
-
-
     useEffect(async () => {
-        const response = await fetch('https://api.spacex.land/graphql/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-           query: `
-           {
-             launchesPast(limit: 5) {
-               mission_name
-               launch_date_local
-               launch_site {
-                 site_name
-               }
-               rocket {
-                 rocket_name
-               }
-               details
-             }
-           }`,
-          }),
-        })
-        const { data } = await response.json();
-        const result = data.launchesPast
-        setRows([...result])
-      
-      }, []);
+      const response = await  fetch('https://api.spacexdata.com/v3/launches/past', {
+        method: 'GET',
+        headers : {
+          'content-type': 'application/json'
+        }
+      } )
+      const  data  = await response.json();
+      setRows([...data])
+    
+    }, []);
 
     
     return ( 

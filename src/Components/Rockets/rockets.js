@@ -15,50 +15,39 @@ export const Rockets = () => {
 
 
      const goBackHandle = () => {
-  
-      history.goBack()
-  
+
+      setTimeout(() => {
+        history.goBack();
+      }, 300);
+        
     }
 
      const getTableHandle = () => {
 
-        setPopup(true)
+        setPopup(!popUp)
 
     }
 
     const closePopUpHandle = () => {
 
-        setPopup(!popUp)
+        setPopup(false)
     }
 
     useEffect(async () => {
-        const response = await fetch('https://api.spacex.land/graphql/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-           query: `
-                {
-                  rockets {
-                    name
-                    boosters
-                    description
-                    cost_per_launch
-                    country
-                    
-                  }
-                }
-                  `,
-          }),
-        })
-        const { data } = await response.json();
-        const result = data.rockets
-        setRows([...result])
+        const response = await  fetch('https://api.spacexdata.com/v3/rockets', {
+          method: 'GET',
+          headers : {
+            'content-type': 'application/json'
+          }
+        } )
+        const  data  = await response.json();
+        setRows([...data])
       
       }, []);
 
     
     return ( 
-      <div    style ={{backgroundColor: "#3b3b65"}} >
+      <div style ={{backgroundColor: "#3b3b65"}} >
         <div className = "Back-button-container">
           <button className = "Back-button" onClick = {goBackHandle}>Go Back</button> 
          </div>

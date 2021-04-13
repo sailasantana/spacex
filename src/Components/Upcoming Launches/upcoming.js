@@ -22,32 +22,18 @@ export const UpcomingLaunches = () => {
         setPopup(!popUp)
     }
 
+
     useEffect(async () => {
-        const response = await fetch('https://api.spacex.land/graphql/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-           query: `
-           {
-               launchesUpcoming {
-                 details
-                 mission_name
-                 rocket {
-                   rocket_name
-                   rocket_type
-                 }
-                 launch_date_unix
-                 launch_date_utc
-               }
-             }
-             `,
-          }),
-        })
-        const { data } = await response.json();
-        const result = data.launchesUpcoming
-        setRows([...result])
-      
-      }, []);
+      const response = await  fetch('https://api.spacexdata.com/v3/launches/upcoming', {
+        method: 'GET',
+        headers : {
+          'content-type': 'application/json'
+        }
+      } )
+      const  data  = await response.json();
+      setRows([...data])
+    
+    }, []);
 
     
     return ( 

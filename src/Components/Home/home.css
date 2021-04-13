@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-image : url('https://www.teahub.io/photos/full/200-2003622_flat-design-space.gif') ;
     background-repeat: no-repeat;
     background-size: cover;

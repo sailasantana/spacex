@@ -4,9 +4,11 @@
 }
 
 
-.Tables-view-container{
+/* rendering blank divs -- moved to "Table-list" component */
+
+/* .Tables-view-container{
 
     background-color: #3b3b65;
     height: 100vh;
     text-align: center;
-}
+} */

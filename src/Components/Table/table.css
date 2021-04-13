@@ -1,22 +1,25 @@
 .Table-container {
-   margin:auto;
-   max-width: 85%;
-   margin-top: 30px;
-   border-collapse: collapse;
+  margin:auto;
+  max-width: 80%;
+  margin-top: 30px;
+  border-collapse: collapse;
 
 }
 
- th {
-    border-bottom: 1px solid whitesmoke;
+th {
+  border-bottom: 1px solid whitesmoke;
    
   }
 
-  td, th {
-    padding: 10px;
+td, th {
+  padding: 7px;
 
   }
 
+tr:hover {
+  background-color: #343457}
+
 tr:nth-child(even){
-    background-color: #4e4e7e; 
+  background-color: #4e4e7e; 
 }
 
