@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useTable } from 'react-table';
 import './table.css';
+import PropTypes from 'prop-types';
 
 
 
@@ -52,3 +53,8 @@ export const Table = (props) => {
     )
 
 }
+
+Table.propTypes = {
+  columns: PropTypes.array,
+  data : PropTypes.array
+};
