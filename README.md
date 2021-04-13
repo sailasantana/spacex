@@ -1,69 +1,78 @@
-# Podsights Test - Saila
 
-Use this GraphQL API https://api.spacex.land/graphql/ to display some interesting data from SpaceX. The result should be a single page with at least two tables (Past Launches, Current Missions, Upcoming Launches...)
+# Mini SpaceX App 
 
-The goal of this task is to test your frontend skills, from design to writing clean and reusable code.
+An app that displays tabular information about rockets, upcoming and past launches.
 
-### Start dev server:
+Live :
 
-- npm install
-- npm run start
 
-### Requirements:
+# Screenshots
 
-- You will need to create a Table component by yourself.
-- The Table component should take in a `columns` prop to declare the table columns and a `rows` prop to fill in the table body. An example would be:
+Landing page:
 
-```js
-<Table
-  columns={[
-    {
-      title: 'Row Title',
-      assessor: 'title',
-    },
-    {
-      title: 'Row Date',
-      assessor: 'date',
-    },
-    ..,
-  ]}
-  rows={[
-    {
-      id: '1',
-      title: 'Row 1',
-      date: "2021-04-08"
-      ...
-    },
-    ...
-  ]}
-/>
-```
+# Tablet/Desktop View
 
-- Use async/await to fetch data.
-- Use hooks
-- Make it pretty and minimalistic.
+![Landing-Table/Desktop](screenshots/landingtd.png)
 
-Apart from this you can do anything you want.
+# Mobile View
 
-### Example of an api fetch:
+![Landing-Mobile](screenshots/landingm.png)
 
-```js
-const resp = await fetch('https://api.spacex.land/graphql/', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-    query: `
-      {
-        launchesPast(limit: 10) {
-          id
-          launch_date_utc
-          rocket {
-            rocket_name
-          }
-          ...
-        }
-      }`,
-  }),
-});
-const { data } = await resp.json();
-```
+Tables View :
+
+# Tablet/Desktop View
+
+![Table-td](screenshots/tabletd.png)
+
+![Table-td](screenshots/tabletd2.png)
+
+# Mobile View
+
+![Table-m](screenshots/tablem.png)
+
+![Table-m](screenshots/tablem2.png)
+
+
+
+# API Endpoints
+
+
+### GET
+- /api.spacexdata.com/v3/rockets (Rockets)
+- /api.spacexdata.com/v3/launches/upcoming (Upcoming Launches)
+- /api.spacexdata.com/v3/launches/past (Past Launches)
+
+
+
+
+# Environment Set Up
+
+* npm install
+* npm run start
+
+
+
+# Run Tests
+
+* To run all tests, run : ```npm test```
+
+
+
+# Built With
+
+## Front-End/NPM Packages
+* React
+* React Hooks 
+* React-Router
+* React-Table
+* Date-fns
+
+
+## Testing
+
+* Jest
+
+
+# Acknowledgments
+
+* Landing page animation borrowed from Michael Taiwo https://dribbble.com/shots/6847700-Space-Flat-Design
