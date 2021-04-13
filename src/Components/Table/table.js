@@ -5,10 +5,26 @@ import PropTypes from 'prop-types';
 
 
 
+
 export const Table = (props) => {
 
     const columns = useMemo(() => props.columns, [props.columns])
     const data = useMemo(() => props.data, [props.data])
+    
+    const [popUp, setPopup] = useState(false);
+
+
+
+     const getTableHandle = () => {
+
+        setPopup(!popUp)
+
+    }
+
+    const closePopUpHandle = () => {
+
+        setPopup(false)
+    }
         
     const {
        //This function is used to resolve any props needed for your table wrapper
@@ -32,9 +48,17 @@ export const Table = (props) => {
         data
     })
 
+ 
    
     return (
-        <>
+        <> 
+     <div className = "All-container">   
+     <button onClick = {getTableHandle} className = "Table-button">{props.name}</button> 
+     {data.length > 0 && popUp ?
+     <div className = "Pop-up-container">
+       <div className = "Close-pop-up-container">  
+       <button onClick = {closePopUpHandle} className = "Close-pop-up-button">x</button>
+       </div>
         <table className = "Table-container" {...getTableProps()}>
         <thead>
               {headerGroups.map(headerGroup => (
@@ -57,8 +81,11 @@ export const Table = (props) => {
                 )
               })}
             </tbody>
-        </table>
-           
+        </table>        
+        </div>
+        : null}
+
+         </div>  
         </>
     )
 
@@ -66,5 +93,6 @@ export const Table = (props) => {
 
 Table.propTypes = {
   columns: PropTypes.array,
-  data : PropTypes.array
+  data : PropTypes.array,
+  name: PropTypes.string
 };

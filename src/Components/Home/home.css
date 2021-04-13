@@ -2,6 +2,12 @@
     font-family: Helvetica Neue,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;
 }
 
+.Home-image{
+   
+    height : 150px;
+     width : 400px ;
+}
+
 .Home-container {
     display: flex;
     justify-content: center;
@@ -37,3 +43,12 @@
 
 }
 
+/* media query for tablet and desktop sizes */
+@media screen and (min-width: 768px) { 
+    .Home-image{
+   
+        height : 250px;
+         width : 600px ;
+    }
+
+}

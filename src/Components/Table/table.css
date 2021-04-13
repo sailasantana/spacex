@@ -6,6 +6,11 @@
 
 }
 
+.Close-pop-up-button{
+ 
+  margin-right: 20px;
+}
+
 th {
   border-bottom: 1px solid whitesmoke;
    
@@ -23,3 +28,102 @@ tr:nth-child(even){
   background-color: #4e4e7e; 
 }
 
+
+.Back-button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding:10px;
+  
+}
+
+
+.Back-button {
+  color: white;
+  text-decoration: none;
+  border : 3px solid white;
+  padding : 12px;
+  min-width: fit-content;
+  width: 10%;
+  text-align: center; 
+  background-color: Transparent;
+  font-size: 16px;
+
+}
+
+
+.Back-button:hover{
+  color: rgb(254, 254, 53);
+  border : 3px solid rgb(254, 254, 53);
+  cursor:pointer;
+  
+
+}
+
+.Table-button{
+  text-align: center;
+  margin-top: 80px;
+  font-size: 2.0em;
+  color: white;
+  text-decoration: none;
+  border : 3px solid white;
+  padding : 9px;
+  min-width: fit-content;
+  width: 15%;
+  text-align: center; 
+  background-color: Transparent;
+  font-size: 20px;
+}
+
+.Table-button:hover{
+  color: rgb(254, 254, 53);
+  border : 3px solid rgb(254, 254, 53);
+  cursor:pointer;
+
+}
+
+.Pop-up-container{
+  margin-top: 40px;
+}
+
+
+
+.Close-pop-up-button{
+  color: white;
+  text-decoration: none;
+  border : none;   
+  min-width: fit-content;
+  width: 4.5%;
+  text-align: center; 
+  background-color: Transparent;
+  font-size: 26px;
+  float:right;
+  margin-right: 30px;
+
+}
+
+.Close-pop-up-button:hover{
+  color: rgb(254, 254, 53);
+  border : 3px solid rgb(254, 254, 53);
+  cursor:pointer;
+
+}
+
+.All-container{
+    background-color: #3b3b65 ;
+    padding-bottom: 20px;
+
+
+}
+
+.Table-container{
+  margin-top: 50px;
+}
+
+/* media query for tablet and desktop sizes */
+@media screen and (min-width: 768px) { 
+  .Close-pop-up-button{
+ 
+      margin-right: 70px;
+  }
+
+}

@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { COLUMNS } from './columns';
 import { Table } from '../Table/table';
-import './upcoming.css';
 
 
 export const UpcomingLaunches = () => {
@@ -37,13 +36,8 @@ export const UpcomingLaunches = () => {
 
     
     return ( 
-      <div className = "Upcoming-container" >
-        <button onClick = {getTableHandle} className = "Upcoming-button">Upcoming Launches</button> 
-        {rows.length && popUp > 0 ?
-         <div>
-        <button onClick = {closePopUpHandle} className = "Close-pop-up-button">x</button>  
-        <Table columns = {COLUMNS} data = {rows} />
-        </div> : null}
+      <div  >
+        <Table columns = {COLUMNS} data = {rows} name = 'Upcoming Launches'/>
       </div>   
       
     );
