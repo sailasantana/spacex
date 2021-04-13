@@ -2,13 +2,27 @@
 import React, { useState, useEffect } from 'react';
 import { COLUMNS } from './columns';
 import { Table } from '../Table/table';
-import { useTable } from 'react-table';
 import './past.css';
 
 
 export const PastLaunches = () => {
 
     const [rows, setRows] = useState([]);
+    const [popUp, setPopup] = useState(false);
+
+
+    const getTableHandle = () => {
+
+      setPopup(true)
+
+    }
+
+    const closePopUpHandle = () => {
+
+        setPopup(!popUp)
+    }
+
+
 
     useEffect(async () => {
         const response = await fetch('https://api.spacex.land/graphql/', {
@@ -39,11 +53,12 @@ export const PastLaunches = () => {
 
     
     return ( 
-      <div>
-        {rows.length > 0 ?
+      <div  className= "Past-main-container" >
+      <button onClick = {getTableHandle} className = "Past-button">Past Launches</button> 
+       {rows.length > 0 && popUp ?
          <div className = "Past-container">
-         <h1 className = "Past-title">Past Launches</h1> 
-        <Table columns = {COLUMNS} data = {rows} />
+          <button onClick = {closePopUpHandle} className = "Close-pop-up-button">x</button>  
+          <Table columns = {COLUMNS} data = {rows} />
         </div> : null}
       </div>   
       

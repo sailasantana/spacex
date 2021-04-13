@@ -9,13 +9,26 @@ import './rockets.css';
 export const Rockets = () => {
 
     const [rows, setRows] = useState([]);
+    const [popUp, setPopup] = useState(false);
+
     const history = useHistory();
 
 
-    function goBackHandle() {
+     const goBackHandle = () => {
   
       history.goBack()
   
+    }
+
+     const getTableHandle = () => {
+
+        setPopup(true)
+
+    }
+
+    const closePopUpHandle = () => {
+
+        setPopup(!popUp)
     }
 
     useEffect(async () => {
@@ -45,15 +58,17 @@ export const Rockets = () => {
 
     
     return ( 
-      <div>
-
-         {rows.length > 0 ?
-         <div>
-         <div className = "Back-button-container">
+      <div    style ={{backgroundColor: "#3b3b65"}} >
+        <div className = "Back-button-container">
           <button className = "Back-button" onClick = {goBackHandle}>Go Back</button> 
          </div>
-         <h1 className = "Rockets-title">Rockets</h1> 
-          <Table columns = {COLUMNS} data = {rows} />
+        <button onClick = {getTableHandle} className = "Rockets-button">Rockets</button> 
+         {rows.length > 0 && popUp ?
+         <div className = "Pop-up-container">
+           <div className = "Close-pop-up-container">  
+           <button onClick = {closePopUpHandle} className = "Close-pop-up-button">x</button>
+           </div>  
+        <Table className = "Table-container" columns = {COLUMNS} data = {rows} />
           </div>
           : null
          } 

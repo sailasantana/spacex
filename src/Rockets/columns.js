@@ -5,7 +5,7 @@ export const COLUMNS = [
   
     },
     {
-      Header: 'Cost Per Launch',
+      Header: 'Cost Per Launch (USD)',
       accessor: 'cost_per_launch',
    
     },
@@ -14,7 +14,7 @@ export const COLUMNS = [
       accessor: 'country'
     },
     {
-      Header: 'Description',
+      Header: 'Details',
       accessor: 'description',
     
     }

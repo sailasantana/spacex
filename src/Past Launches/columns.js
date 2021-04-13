@@ -1,3 +1,6 @@
+import { format } from 'date-fns';
+
+
 export const COLUMNS = [
     {
       Header: 'Mission Name',
@@ -6,7 +9,9 @@ export const COLUMNS = [
     },
     {
       Header: 'Launch Date',
-      accessor: 'launch_date_local',
+      accessor: 'launch_date_local', Cell: ({ value }) => {
+        return format(new Date(value), 'dd/MM/yyyy')
+      }
     
     },
     {

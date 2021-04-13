@@ -1,3 +1,5 @@
+import { format } from 'date-fns';
+
 export const COLUMNS = [
     {
         Header: 'Rocket',
@@ -12,6 +14,9 @@ export const COLUMNS = [
     {
       Header: 'Launch Date',
       accessor: 'launch_date_utc',
+      Cell: ({ value }) => {
+        return format(new Date(value), 'dd/MM/yyyy')
+      }
    
     },
     {

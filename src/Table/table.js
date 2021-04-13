@@ -5,6 +5,7 @@ import './table.css';
 
 
 export const Table = (props) => {
+
     const columns = useMemo(() => props.columns, [props.columns])
     const data = useMemo(() => props.data, [props.data])
         
